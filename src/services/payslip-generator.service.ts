@@ -103,10 +103,9 @@ export class PayslipGeneratorService {
         doc
           .moveDown(0.5)
           .fontSize(11)
-          .text('Gross Salary', 50, doc.y, { continued: true, bold: true })
+          .text('Gross Salary', 50, doc.y, { continued: true })
           .text(this.formatCurrency(payroll.grossSalary), {
             align: 'right',
-            bold: true,
           })
           .moveDown(2);
 
@@ -138,10 +137,9 @@ export class PayslipGeneratorService {
         doc
           .moveDown(0.5)
           .fontSize(11)
-          .text('Total Deductions', 50, doc.y, { continued: true, bold: true })
+          .text('Total Deductions', 50, doc.y, { continued: true })
           .text(this.formatCurrency(payroll.totalDeductions), {
             align: 'right',
-            bold: true,
           })
           .moveDown(2);
 
@@ -149,10 +147,9 @@ export class PayslipGeneratorService {
         doc
           .fontSize(14)
           .fillColor('green')
-          .text('Net Salary', 50, doc.y, { continued: true, bold: true })
+          .text('Net Salary', 50, doc.y, { continued: true })
           .text(this.formatCurrency(payroll.netSalary), {
             align: 'right',
-            bold: true,
           })
           .fillColor('black')
           .moveDown(3);
